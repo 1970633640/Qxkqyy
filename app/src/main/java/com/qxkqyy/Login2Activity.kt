@@ -11,11 +11,10 @@ import android.content.Context
 import android.content.SharedPreferences.Editor
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-
+import com.qxkqyy.adapter.MessageAdapter
 
 
 class Login2Activity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login2)

@@ -51,7 +51,7 @@ class ScheduleActivity : AppCompatActivity() {
             }
         }
         bbs.setOnClickListener {
-            startActivity(Intent(overridePendingTransition@ this, ChatActivity::class.java))
+            startActivity(Intent(overridePendingTransition@ this, BoardActivity::class.java))
             overridePendingTransition(R.anim.upout, R.anim.upin)
         }
         val uri = Uri.parse("http://qxkqyy.v1.1252.cn/uploadfile/2016/0107/20160107083323831.jpg")

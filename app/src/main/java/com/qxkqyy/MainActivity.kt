@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             val preferences = getSharedPreferences("user", 0)
             val logged = preferences.getString("logged", "0")
             if (logged == "1") {
-                startActivity(Intent(overridePendingTransition@ this, ChatActivity::class.java))
+                startActivity(Intent(overridePendingTransition@ this, BoardActivity::class.java))
                 overridePendingTransition(R.anim.upout, R.anim.upin)
             } else {
                 Toast.makeText(getApplicationContext(), "请登录后再留言！",
