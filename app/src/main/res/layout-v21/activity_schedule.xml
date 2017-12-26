@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qxkqyy.ScheduleActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/eeeeee">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eeeeee"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/doctorcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/cardview_light_background"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/picURL"
+                        android:layout_width="90dp"
+                        android:layout_height="130dp"
+                        fresco:placeholderImage="@drawable/picture" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/id_DoctorName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_margin="10dp"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="2"
+                            android:text="米根（主治医生）"
+                            android:textColor="#212121"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:id="@+id/DoctorTel"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_margin="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/phone"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:text=" 18812345678"
+                            android:textColor="#424242"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/DoctorBBS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_margin="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/sms"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:maxLines="1"
+                            android:text="  给他留言"
+                            android:textColor="#424242"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_selector2"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10sp"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp"
+                android:paddingTop="10sp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="日期"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="end|center_vertical"
+                    android:text="2017年12月31日"
+                    android:textColor="#666666"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_selector2"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10sp"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp"
+                android:paddingTop="10sp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="时间"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="end|center_vertical"
+                    android:text="13:00-13:30"
+                    android:textColor="#666666"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_selector2"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10sp"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp"
+                android:paddingTop="10sp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="地址"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="end|center_vertical"
+                    android:text="石家庄市桥西区自强路99号 中华大街与自强路交叉口西北角"
+                    android:textColor="#666666"
+                    android:textSize="22sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Button
+                android:id="@+id/addCalender"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_selector"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="添加到我的日程"
+                android:textColor="#f5f5f5"
+                android:textColorHighlight="#d6d6d6"
+                android:textSize="18sp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_selector"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="修改预约时间"
+                android:textColor="#f5f5f5"
+                android:textColorHighlight="#d6d6d6"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_selector3"
+                android:elevation="3dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="删除预约"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

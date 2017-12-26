@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">随心约</string>
+    <string name="my_account">我的账号</string>
+    <string name="new_task">新建预约</string>
+    <string name="title_activity_login2">登录账号</string>
+    <string name="doctor_list">找医生</string>
+    <string name="my_schedule">我的预约</string>
+    <string name="title_activity_account">我的账号</string>
+    <string name="title_activity_list">医生列表</string>
+    <string name="bbs">留言板</string>
+    <string name="title_activity_schedule">我的预约</string>
+    <string name="title_activity_chat">留言</string>
+    <string name="title_activity_new">新建预约</string>
+</resources>
