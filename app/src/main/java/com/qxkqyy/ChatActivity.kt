@@ -1,3 +1,4 @@
+/*
 package com.qxkqyy
 
 import android.os.Bundle
@@ -9,19 +10,21 @@ import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ImageButton
+import com.qxkqyy.adapter.MessageAdapter
 
 class ChatActivity : AppCompatActivity() {
+    var mAdapter = MessageAdapter()
+    var mRvMessage = findViewById(R.id.rv_content)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat)
+        setContentView(R.layout.activity_board)
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener {
             finish()
         }
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-
     }
 
     override fun onStart() {
@@ -42,8 +45,10 @@ class ChatActivity : AppCompatActivity() {
             }
         })
     }
+
     override fun finish() {
         super.finish()
         overridePendingTransition(R.anim.upin, R.anim.upout2)
     }
 }
+*/

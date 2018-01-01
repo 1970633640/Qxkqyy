@@ -27,7 +27,6 @@ class ListActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             finish()
         }
-
     }
 
     override fun onStart() {

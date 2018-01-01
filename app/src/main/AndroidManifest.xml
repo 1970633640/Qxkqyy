@@ -68,6 +68,14 @@
                 android:value="com.qxkqyy.MainActivity" />
         </activity>
         <activity
+            android:name=".BoardActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/MaterialLight2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.qxkqyy.MainActivity" />
+        </activity>
+        <activity
             android:name=".NewActivity"
             android:label="@string/title_activity_new"
             android:theme="@style/MaterialLight2">

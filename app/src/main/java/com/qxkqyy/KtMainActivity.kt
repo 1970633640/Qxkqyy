@@ -1,3 +1,4 @@
+/*
 package com.qxkqyy
 
 import android.content.Context
@@ -19,7 +20,7 @@ import android.content.SharedPreferences
 import android.widget.Toast
 
 
-class MainActivity : AppCompatActivity() {
+class KtMainActivity : AppCompatActivity() {
     private var mBanner: CustomBanner<String>? = null
     private fun setBean(beans: List<String>) {
         mBanner?.setPages(object : CustomBanner.ViewCreator<String> {
@@ -88,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             val preferences = getSharedPreferences("user", 0)
             val logged = preferences.getString("logged", "0")
             if (logged == "1") {
-                startActivity(Intent(overridePendingTransition@ this, ChatActivity::class.java))
+                startActivity(Intent(overridePendingTransition@ this, BoardActivity::class.java))
                 overridePendingTransition(R.anim.upout, R.anim.upin)
             } else {
                 Toast.makeText(getApplicationContext(), "请登录后再留言！",
@@ -138,3 +139,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+*/
