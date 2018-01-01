@@ -24,10 +24,12 @@ public class AppointmentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private int mLayoutAppointment = R.layout.item_appointment;
     private Context mContext;
     private List<AppointmentModel> mAppointmentList;
+    private AppointmentCallback mAppointmentCallback;
 
-    public AppointmentAdapter(Context context, List<AppointmentModel> appointmentList) {
+    public AppointmentAdapter(Context context, List<AppointmentModel> appointmentList, AppointmentCallback appointmentCallback) {
         this.mContext = context;
         this.mAppointmentList = appointmentList;
+        this.mAppointmentCallback = appointmentCallback;
     }
 
     @Override
@@ -42,10 +44,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         ((AppointmentViewHolder) holder).mTvContent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, ScheduleActivity.class);
-                intent.putExtra("doctor",mAppointmentList.get(position).getDoctor());
-                intent.putExtra("time",mAppointmentList.get(position).getTime());
-                mContext.startActivity(intent);
+                mAppointmentCallback.startActivityWithResult(mAppointmentList.get(position));
             }
         });
     }
@@ -62,5 +61,9 @@ public class AppointmentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             super(itemView);
             mTvContent = (TextView) itemView.findViewById(R.id.tv_content);
         }
+    }
+
+    public interface AppointmentCallback{
+        void startActivityWithResult(AppointmentModel appointmentModel);
     }
 }

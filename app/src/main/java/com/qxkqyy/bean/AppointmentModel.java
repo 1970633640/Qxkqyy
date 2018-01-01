@@ -8,8 +8,8 @@ import io.realm.annotations.PrimaryKey;
  */
 
 public class AppointmentModel extends RealmObject {
-    @PrimaryKey
     private String time;
+    @PrimaryKey
     private String doctor;
 
     public AppointmentModel() {

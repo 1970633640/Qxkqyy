@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRvAppointment;
     private List<AppointmentModel> mAppointmentModelList;
     private int ADD_APPOINTMENT = 100;
+    private int APPOINTMENT_DETAIL = 200;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         Fresco.initialize((Context)this);
@@ -113,7 +114,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData(){
         mAppointmentModelList = RealmHelper.getRealm(getApplicationContext()).getAppointment();
-        mAdapter = new AppointmentAdapter(getApplicationContext(),mAppointmentModelList);
+        mAdapter = new AppointmentAdapter(getApplicationContext(), mAppointmentModelList, new AppointmentAdapter.AppointmentCallback() {
+            @Override
+            public void startActivityWithResult(AppointmentModel appointmentModel) {
+                Intent intent = new Intent(getApplicationContext(), ScheduleActivity.class);
+                intent.putExtra("doctor",appointmentModel.getDoctor());
+                intent.putExtra("time",appointmentModel.getTime());
+                startActivityForResult(intent, APPOINTMENT_DETAIL);
+
+            }
+        });
         mRvAppointment.setAdapter(mAdapter);
     }
 
@@ -211,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == ADD_APPOINTMENT){
+        if (requestCode == ADD_APPOINTMENT || requestCode == APPOINTMENT_DETAIL){
             onResume();
         }
     }
