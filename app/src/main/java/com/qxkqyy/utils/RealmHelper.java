@@ -42,13 +42,13 @@ public class RealmHelper {
 
     public void insertAppointment(AppointmentModel appointmentModel) {
         mRealm.beginTransaction();
-        mRealm.copyToRealmOrUpdate(appointmentModel);
+        mRealm.insertOrUpdate(appointmentModel);
         mRealm.commitTransaction();
     }
 
     public void setAppointment(AppointmentModel appointmentModel) {
         mRealm.beginTransaction();
-        mRealm.copyToRealmOrUpdate(appointmentModel);
+        mRealm.insertOrUpdate(appointmentModel);
         mRealm.commitTransaction();
     }
 

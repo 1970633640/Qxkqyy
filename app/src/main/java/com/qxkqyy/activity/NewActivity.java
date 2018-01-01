@@ -43,7 +43,7 @@ public class NewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new);
-        setResult(RESULT_OK,new Intent());
+        setResult(RESULT_OK);
         initWidget();
         initDialog();
         initListener();
