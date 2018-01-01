@@ -1,3 +1,4 @@
+/*
 package com.qxkqyy
 
 import android.content.Context
@@ -19,7 +20,7 @@ import android.content.SharedPreferences
 import android.widget.Toast
 
 
-class MainActivity : AppCompatActivity() {
+class KtMainActivity : AppCompatActivity() {
     private var mBanner: CustomBanner<String>? = null
     private fun setBean(beans: List<String>) {
         mBanner?.setPages(object : CustomBanner.ViewCreator<String> {
@@ -138,3 +139,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+*/
