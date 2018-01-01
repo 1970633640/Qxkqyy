@@ -1,4 +1,4 @@
-package com.qxkqyy;
+package com.qxkqyy.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.qxkqyy.R;
 import com.qxkqyy.adapter.MessageAdapter;
 import com.qxkqyy.bean.MessageBean;
 

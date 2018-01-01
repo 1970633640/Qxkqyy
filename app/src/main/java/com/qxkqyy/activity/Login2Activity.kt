@@ -1,17 +1,9 @@
-package com.qxkqyy
+package com.qxkqyy.activity
 
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.view.View
-import android.R.id.edit
-import android.content.Context
-import android.content.SharedPreferences.Editor
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
-import com.qxkqyy.adapter.MessageAdapter
+import com.qxkqyy.R
 
 
 class Login2Activity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.qxkqyy;
+package com.qxkqyy.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.qxkqyy.R;
 
 
 public class WebActivity extends AppCompatActivity {

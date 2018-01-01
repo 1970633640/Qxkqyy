@@ -1,4 +1,4 @@
-/*
+package com.qxkqyy.activity/*
 package com.qxkqyy
 
 import android.os.Bundle

@@ -1,19 +1,16 @@
-package com.qxkqyy
+package com.qxkqyy.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.provider.CalendarContract
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.view.View
 import android.widget.Button
 import android.provider.CalendarContract.Events
 import android.widget.TextView
-import android.R.attr.phoneNumber
 import android.net.Uri
 import com.facebook.drawee.view.SimpleDraweeView
+import com.qxkqyy.R
 
 
 class ScheduleActivity : AppCompatActivity() {

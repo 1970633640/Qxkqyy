@@ -9,11 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.qxkqyy.R;
-import com.qxkqyy.ScheduleActivity;
+import com.qxkqyy.activity.ScheduleActivity;
 import com.qxkqyy.bean.AppointmentModel;
-import com.qxkqyy.bean.MessageBean;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

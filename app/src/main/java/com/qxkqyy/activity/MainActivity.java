@@ -1,4 +1,4 @@
-package com.qxkqyy;
+package com.qxkqyy.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.qxkqyy.R;
 import com.qxkqyy.adapter.AppointmentAdapter;
 import com.qxkqyy.bean.AppointmentModel;
 import com.qxkqyy.utils.RealmHelper;
@@ -25,10 +26,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-import io.realm.Realm;
 import kotlin.TypeCastException;
 import kotlin.jvm.internal.Intrinsics;
 

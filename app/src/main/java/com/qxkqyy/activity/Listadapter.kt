@@ -1,9 +1,7 @@
-package com.qxkqyy
+package com.qxkqyy.activity
 
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,6 +9,7 @@ import android.view.View
 import android.widget.TextView
 import com.facebook.drawee.view.SimpleDraweeView
 import android.support.v7.widget.CardView
+import com.qxkqyy.R
 
 class Listadapter(val con: Context, val items: List<doctor_result>, val itemLayout: Int) :
         RecyclerView.Adapter<Listadapter.ViewHolder>() {

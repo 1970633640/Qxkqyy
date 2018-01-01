@@ -1,4 +1,4 @@
-package com.qxkqyy;
+package com.qxkqyy.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker;
 import com.github.florent37.singledateandtimepicker.dialog.SingleDateAndTimePickerDialog;
+import com.qxkqyy.R;
 import com.qxkqyy.adapter.AppointmentAdapter;
 import com.qxkqyy.bean.AppointmentModel;
 import com.qxkqyy.utils.RealmHelper;
