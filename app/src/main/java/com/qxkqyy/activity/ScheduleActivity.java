@@ -35,6 +35,7 @@ public class ScheduleActivity extends AppCompatActivity{
     TextView mTvTime;
     Button mBtnModify;
     Button mBtnDelete;
+    Button mBtnAddCalender;
     private String mTime="";
     private String mDoctor="";
     private TimeSelector mTimeSelector;
@@ -56,6 +57,7 @@ public class ScheduleActivity extends AppCompatActivity{
         mTvTime = (TextView) findViewById(R.id.tv_time);
         mBtnModify = (Button) findViewById(R.id.btn_modify);
         mBtnDelete = (Button) findViewById(R.id.btn_delete);
+        mBtnAddCalender=(Button)findViewById(R.id.btn_add_calender);
     }
 
     private void initToolbar(){
@@ -95,6 +97,21 @@ public class ScheduleActivity extends AppCompatActivity{
                 RealmHelper.getRealm(getApplicationContext()).removeAppointment(mDoctor, mTime);
                 setResult(RESULT_OK);
                 finish();
+
+            }
+        });
+        mBtnAddCalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_INSERT)
+                        .setData(CalendarContract.Events.CONTENT_URI)
+                        .putExtra(CalendarContract.Events.TITLE, "把预约添加到日程表")
+                        .putExtra(CalendarContract.Events.EVENT_LOCATION, "预约的地点")
+                        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, 1515114000000L)//unix时间戳毫秒
+                        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, 1515115800000L);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
 
             }
         });
